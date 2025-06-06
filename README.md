@@ -14,5 +14,5 @@ AWS Cloud Data Lake &amp; ETL Pipeline for Life Insurance Management System
 | 📈 Logging/Monitoring  | Amazon CloudWatch Logs     | Job monitoring and failure alerts                |
 # Architecture
 ### 🔄 ETL Pipeline Data Flow (Claimed & Not Claimed Active)
-![ETL Flow](C:\Users\91701\OneDrive\Documents\architecuture.png)
+![ETL Flow](architecuture.png)
 
