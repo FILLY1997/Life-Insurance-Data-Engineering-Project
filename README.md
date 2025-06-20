@@ -18,7 +18,7 @@ AWS Cloud Data Lake &amp; ETL Pipeline for Life Insurance Management System
 ## 🔁 Data Flow
 
 ### 📥 1. Data Ingestion
-Insurance data is ingested and stored in the **Bronze layer** of the Amazon S3 data lake in **Parquet** format.
+Insurance data is ingested and stored in the Oracle database in table format
 
 ### ⚙️ 2. ETL Processing
 **AWS Glue** jobs extract data from the oracle, perform necessary transformations (including **schema mapping** and **data masking**), and load the cleansed data into the **Amezon s3 buget**.  
@@ -27,15 +27,7 @@ Insurance data is ingested and stored in the **Bronze layer** of the Amazon S3 d
 ### 🗂️ 3. Data Cataloging
 The **AWS Glue Data Catalog** indexes the processed data, making it discoverable and queryable for downstream applications.
 
-### 📊 4. Model Training
-**Amazon SageMaker** accesses the cleansed data from the Silver layer to train a **Linear Regression model** using a **Scikit-learn** pipeline.  
-The trained model pipeline is serialized and stored in the **Golden layer** of the S3 data lake.
-
-### 🚀 5. Real-Time Predictions
-A **Streamlit** application retrieves the serialized model pipeline from S3.  
-Users input customer details via the UI, and the app returns **real-time premium estimations** using the deployed model.
-
-### 📈 6. Business Intelligence
+### 📈 4. Business Intelligence
 **Quick Sight** connects to the data in the Golden layer to generate **interactive dashboards**, providing insights into:
 - Insurance trends
 - Customer demographics
